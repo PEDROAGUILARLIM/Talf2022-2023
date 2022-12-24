@@ -1,0 +1,70 @@
+
+\documentclass[11pt]{article}
+
+    \title{\textbf{Práctica 3}}
+    \author{Pedro Antonio Aguilar Lima}
+    \date{2022-2023}
+    \usepackage{dsfont}
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\usepackage{graphicx}
+\usepackage{whilecode2}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Define the TM solution of exercise 3.4 of the problem list and test its correct behaviour. 
+\\ 
+\\
+3.4. Prove that the function $add(x,y)=x+y, with \ x,y \in  \mathds{N} $ is Turing-computable using the unary notation $ \{ | \} $ . You have to create a TM with two arguments
+separated by a blank symbol that stars and ends behind the stings.}
+\includegraphics[scale=0.50]{/home/kali/Escritorio/maquinaturing3.4.png}
+
+
+\newpage
+
+\section{Define a recursive function for the sum of three values.}
+ 
+Se usa la funcion definida de adicción: el programa haría algo parecido a lo  siguiente, es decir primero sumará los primeros dos elementos y luego al resultado que esto ofrezca, le suma el siguiente término:
+\\
+
+ $suma3=<<\pi^3_1|\sigma(\pi^3_2)>|\sigma(\pi^3_3)>$
+ \\
+ 
+ \includegraphics[scale=0.60]{/home/kali/Escritorio/5.png}
+ 
+\newpage
+
+\section{Implement a WHILE program that computes the sum of thre values. You must use an auxiliary variable that accumulates the result of the sum.}
+
+\begin{whilecode}[H]
+$X_4 \Assig 0$
+
+ \While{$X_1 \not = 0$}{
+
+  $X_4 \Assig X_4 + 1$\;
+  $X_1 \Assig X_1 - 1$\;
+  
+
+ }
+ 
+  \While{$X_2 \not = 0$}{
+
+  $X_2 \Assig X_2 - 1$\;
+  $X_4 \Assig X_4 + 1$\;
+
+ }
+ 
+  \While{$X_3 \not = 0$}{
+  
+  $X_4 \Assig X_4 + 1$\;
+  $X_3 \Assig X_3 - 1$\;
+  
+
+ }
+
+ \end{whilecode}
+
+\end{document}
+
