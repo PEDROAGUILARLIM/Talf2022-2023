@@ -1,0 +1,99 @@
+
+\documentclass[11pt]{article}
+
+    \title{\textbf{Práctica 4}}
+    \author{Pedro Antonio Aguilar Lima}
+    \date{2022-2023}
+    \usepackage{dsfont}
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\usepackage{graphicx}
+\usepackage{whilecode2}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Create the simplest WHILE program that computes the diverge function (with zero arguments) and compute the codification of its code.}
+
+\whileprogram{diverger}{0}{
+
+ \DefaultVar{1}\Assig\DefaultVar{1}+1;
+
+}{s}
+
+\begin{whilecode}[H]
+
+ \While{$X_1 \not = 0$}{
+
+  $X_1 \Assig X_1$\;
+
+ }
+
+
+
+
+\end{whilecode}
+
+El bucle entra en divergencia y la codificación es menor.
+\\
+
+\includegraphics[scale=0.75]{/home/kali/Escritorio/captura2.png}
+
+\newpage
+
+\section{Create an Octave script that enumerates all the vectors.}
+
+\begin{whilecode}[H]
+
+fuction function printNvectors(N)
+\\
+\hspace{0.5cm}   for i=0:N-1
+\\
+\hspace{1cm}     disp([ ' ( ' num2str(godeldecoding(i)) ' ) ' ])
+\\
+\hspace{1cm} i=i+1;
+\\
+\hspace{0.75cm} end
+\\
+end
+\\
+
+
+
+
+
+
+
+\end{whilecode}
+
+\includegraphics[scale=0.75]{/home/kali/Escritorio/1.png}
+
+\newpage
+
+\section{Create an Octave script that enumerates all the WHILE programs.}
+
+\begin{whilecode}[H]
+$\{$
+\\
+fuction practica4.2()
+\\
+\hspace{0.5cm} i=0;
+\\
+\hspace{0.75cm} while{$ ( i\geq 0 )$}
+\\
+\hspace{1cm} disp(N2WHILE(i))
+\\
+\hspace{1cm} i=i+1;
+\\
+\hspace{0.75cm} end
+\\
+end
+\\
+\}
+\end{whilecode}
+
+\includegraphics[scale=0.75]{/home/kali/Escritorio/4.png}
+
+\end{document}
+
